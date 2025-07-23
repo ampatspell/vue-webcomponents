@@ -16,7 +16,6 @@ export default defineConfig({
     minify: false,
   },
   plugins: [
-    dts(),
     components({}),
     vue({
       template: {
