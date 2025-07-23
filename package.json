@@ -1,0 +1,24 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "standalone": "vite build -c vite.config.standalone.ts --mode production"
+  },
+  "dependencies": {
+    "@nuxt/eslint": "^1.7.0",
+    "eslint": "^9.31.0",
+    "nuxt": "^4.0.1",
+    "vue": "^3.5.17",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "unplugin-vue-components": "^28.8.0",
+    "vite-plugin-dts": "^4.5.4"
+  }
+}

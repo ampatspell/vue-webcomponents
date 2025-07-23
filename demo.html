@@ -1,0 +1,29 @@
+<script>
+  window.process = {
+    env: {}
+  };
+</script>
+
+<script src="./dist/next.umd.js"></script>
+
+<script>
+  Next.register();
+</script>
+
+<style>
+  body {
+    font-family: monospace;
+  }
+
+  .rows {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+</style>
+
+<div class="rows">
+  <div>
+    <next-thing/>
+  </div>
+</div>

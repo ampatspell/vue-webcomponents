@@ -1,0 +1,29 @@
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+import components from 'unplugin-vue-components/vite'
+import dts from 'vite-plugin-dts'
+
+export default defineConfig({
+  build: {
+    lib: {
+      entry: 'app/published/index.ts',
+      name: 'Next',
+      fileName: (format) => `next.${format}.js`,
+      formats: ['umd'],
+    },
+    sourcemap: true,
+    target: 'es2017',
+    minify: false,
+  },
+  plugins: [
+    dts(),
+    components({}),
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (key) => key.startsWith('next-'),
+        }
+      }
+    }),
+  ]
+});
