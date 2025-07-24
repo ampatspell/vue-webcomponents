@@ -1,7 +1,9 @@
 <script setup lang="ts">
-  import TheThing from '~/components/the-thing.vue';
+  import NextHello from '~/published/next-hello.vue';
+
+  const name = ref('component');
 </script>
 
 <template>
-  <TheThing/>
+  <NextHello :name="name" />
 </template>
